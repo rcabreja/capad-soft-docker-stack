@@ -8,4 +8,4 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /home/capito/build:/usr/share/nginx/html:ro
+      - /home/capito/capad-soft-frontends:/usr/share/nginx/html:ro
