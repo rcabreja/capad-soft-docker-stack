@@ -6,6 +6,6 @@ services:
     container_name: react-nginx-local
     restart: always
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - /home/capito/build:/usr/share/nginx/html:ro
