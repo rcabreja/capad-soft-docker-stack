@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:stable-alpine
+    container_name: react-nginx-local
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./build:/usr/share/nginx/html:ro
