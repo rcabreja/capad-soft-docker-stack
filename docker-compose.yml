@@ -9,3 +9,16 @@ services:
       - "80:80"
     volumes:
       - /home/capito/capad-soft-frontends:/usr/share/nginx/html:ro
+
+  # El túnel de Cloudflare
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare-tunnel
+    restart: always
+    command: tunnel run --token eyJhIjoiNmVhYjZlYTU3MDZkYjFiZTRjNmQ0NjZmMDMyYjlkNWEiLCJ0IjoiNjUxYjE4ZDMtYjAwZC00MzNhLTk3OTAtZDIyMTlkYzU2ZjA1IiwicyI6Ill6TmxZbVEyTVRNdE1EYzNaUzAwWlRrNUxXRTJOVEl0TVdNd1lqRTJPRFkyTkdRMyJ9
+    networks:
+      - mired
+
+networks:
+  mired:
+    driver: bridge
