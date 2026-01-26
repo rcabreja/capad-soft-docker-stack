@@ -6,7 +6,7 @@ services:
     container_name: react-nginx-local
     restart: always
     ports:
-      - "80:80"
+      - "443:80"
     volumes:
       - /home/capito/capad-soft-frontends:/usr/share/nginx/html:ro
 
