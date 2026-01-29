@@ -9,6 +9,8 @@ services:
       - "80:80"
     volumes:
       - /home/capito/capad-soft-frontends:/usr/share/nginx/html:ro
+    networks:
+      - mired
 
   # El túnel de Cloudflare
   tunnel:
